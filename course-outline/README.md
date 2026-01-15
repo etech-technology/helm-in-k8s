@@ -1,9 +1,7 @@
-# Helm & Helm Charts — Course Outline + Teaching Notes
+# Helm & Helm Charts — Course Outline 
 **Updated:** January 15, 2026
 
-This folder contains the lecture notes, instructor prompts, demos, and student labs for teaching Helm in a live online masterclass.
-
-## How to Teach This (Suggested Flow)
+## How to Use Guide
 - Session 1: Helm basics + Chart anatomy + Lab 1
 - Session 2: Values, templates, releases, rollback + Lab 2
 - Session 3: Repos, deps, packaging + Secrets patterns + Lab 3
