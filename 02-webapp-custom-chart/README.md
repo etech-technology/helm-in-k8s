@@ -1,8 +1,6 @@
 # Project 2 — Custom Web App Helm Chart (Flask)
 
 ## Build & Push the App Image
-This project includes a small Flask app in `app/`.
-
 ```bash
 cd app
 docker build -t <your-registry>/flaskapp:latest .
