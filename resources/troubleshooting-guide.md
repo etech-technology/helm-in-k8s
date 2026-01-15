@@ -1,1 +1,1 @@
-Common Helm issues and fixes.
+Troubleshooting Helm.

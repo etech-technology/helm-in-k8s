@@ -1,3 +1,1 @@
-# 07 Upgrades Rollbacks.Md
-
-History, upgrade strategies, rollback safety.
+Helm upgrades and rollbacks.

@@ -1,1 +1,1 @@
-Production Helm checklist.
+Helm best practices.

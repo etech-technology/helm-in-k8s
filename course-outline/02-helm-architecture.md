@@ -1,3 +1,1 @@
-# 02 Helm Architecture.Md
-
-Charts, releases, repos, rendering lifecycle.
+Helm architecture explained.

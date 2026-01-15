@@ -1,1 +1,1 @@
-Senior Helm interview questions.
+Helm interview questions.

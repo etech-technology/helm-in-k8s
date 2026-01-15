@@ -1,3 +1,1 @@
-# 01 What Is Helm.Md
-
-Why Helm exists, problems it solves, terminology.
+What is Helm and why it exists.
