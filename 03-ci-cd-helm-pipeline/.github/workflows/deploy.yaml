@@ -1,0 +1,35 @@
+name: Deploy to EKS with Helm
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Helm
+        uses: azure/setup-helm@v4
+
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Configure kubeconfig
+        run: |
+          aws eks update-kubeconfig --region "${{ secrets.AWS_REGION }}" --name "${{ secrets.EKS_CLUSTER }}"
+
+      - name: Deploy with Helm (upgrade/install)
+        run: |
+          kubectl create ns demo --dry-run=client -o yaml | kubectl apply -f -
+          helm upgrade --install webapp ./helm -n demo             --set image.tag="${{ github.sha }}"
+          helm status webapp -n demo

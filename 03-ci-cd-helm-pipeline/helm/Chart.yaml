@@ -1,0 +1,6 @@
+apiVersion: v2
+name: webapp-cicd-chart
+description: Helm chart used by GitHub Actions for CI/CD deployment
+type: application
+version: 0.1.0
+appVersion: "1.0"

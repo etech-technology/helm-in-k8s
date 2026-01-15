@@ -1,0 +1,8 @@
+1) Get the NGINX Service:
+   kubectl get svc -n {{ .Release.Namespace }} {{ include "chart.fullname" . }}
+
+2) If using ClusterIP, port-forward:
+   kubectl port-forward -n {{ .Release.Namespace }} svc/{{ include "chart.fullname" . }} 8080:{{ .Values.service.port }}
+
+3) Then open:
+   http://localhost:8080

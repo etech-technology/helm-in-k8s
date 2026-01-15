@@ -1,0 +1,9 @@
+Teaching ideas:
+- Show students how to add a Helm repo + search charts
+- Install kube-prometheus-stack and explain what gets created:
+  - Prometheus, Alertmanager, Grafana, exporters, CRDs
+- Demonstrate:
+  - helm get values
+  - helm get manifest
+  - helm upgrade with -f values-overrides.yaml
+  - helm uninstall

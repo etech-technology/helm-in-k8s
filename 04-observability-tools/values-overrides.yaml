@@ -1,0 +1,9 @@
+# Example overrides for kube-prometheus-stack (safe defaults for demos)
+grafana:
+  adminPassword: "admin"   # demo only — change for real environments
+  service:
+    type: ClusterIP
+
+prometheus:
+  prometheusSpec:
+    retention: 7d
